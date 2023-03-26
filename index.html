@@ -8,14 +8,66 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/styles.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/" type="image/x-icon">  
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">  
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track__art"></div>
+                <div class="track__name">Track Name</div>
+                <div class="track__artist">Track Artist</div>
+            </div>
 
+            <div class="slider__container">
+                <div class="current__time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek__slider" onchange="seekTo()">
+                <div class="total__duration">00:00</div>
+            </div>
+
+            <div class="slider__container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="99" class="volume__slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="random__track" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div>
+                <div class="prev__track" onclick="prevTrack()">
+                    <i class="fas fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause__track" onclick="playpauseTrack()">
+                    <i class="fas fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next__track" onclick="nextTrack()">
+                    <i class="fas fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat__track" onclick="repeatTrack()">
+                    <i class="fas fa-repeat fa-2x" title="repeat"></i>
+                </div>
+            </div>
+
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+
+
+
+        </div>
+    </div>
 
 
 
